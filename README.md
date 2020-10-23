@@ -15,8 +15,8 @@ Using a large data set of houses sold in the greater Seattle area between 2014 a
 ### Exploratory Data Analysis
 
 First, I created some visualizations to determine whether variables were continuous or categorical, and their correlations with my target variable (sale price).
-![Dataset Histograms](./Images/hists.png)
-![Dataset Correlation Heatmap](./Images/heatmap.png)
+![Dataset Histograms](https://github.com/bagnine/KChousing/blob/main/images/hists.png)
+![Dataset Correlation Heatmap](https://github.com/bagnine/KChousing/blob/main/images/heatmap.png)
 
 After running some statistical tests, I had a good idea of which features were important and which ones I would need to transform in order to be useful.
 
@@ -26,7 +26,7 @@ After a little bit of cleaning to remove outliers and erroneous data, I was read
 
 Several of the variables in the dataset are categorical and a few (date and zipcode) look like numbers to the linear regression model and need to be modified in order to fit the model. After performing ANOVA tests on several of them, I modified the dates into months (because the span of the data is only 1 year and I didn't find a big difference between May of 2014 and 2015 I just used the month) and created dummy columns for several variables including grade, view and zipcode.
 
-![Regression Plots](./Images/regplots.png)
+![Regression Plots](https://github.com/bagnine/KChousing/blob/main/images/regplots.png)
 
 After creating scatterplots with regression lines for many of the continuous features with price, I noticed several had a slight curve or a regression line that didn't seem to fit the data well. I performed log transformations on a few to redistribute the data and hopefully better fit my model. 
 
@@ -38,15 +38,15 @@ I tested several different models with various combinations of the existing feat
 
 After putting together a few features that seemed to work best, I plotted out the residuals to see how they were distributed. The distribution was heteroscedastic, and I decided to try to fix that through Polynomial Functions.
 
-![Heteroscedastic Scatter](./Images/scatter.png)
+![Heteroscedastic Scatter](https://github.com/bagnine/KChousing/blob/main/images/scatter.png)
 
 After a few tests of polynomial variations of my model, I found a fit that was near my goals. The residual plot was a lot more evenly distributed, indicating that I managed to compensate for more of the relationship. 
 
-![Homoscedastic Scatter](./Images/scatter2.png)
+![Homoscedastic Scatter](https://github.com/bagnine/KChousing/blob/main/images/scatter2.png)
 
 Finally, I plotted the price data from my test and training set along with the predictions.
 
-![Prediction distribution plot](./Images/distplot.png)
+![Prediction distribution plot](https://github.com/bagnine/KChousing/blob/main/images/distplot.png)
 
 Pretty good but not perfect. There are still some outliers to account for, but the model is performing well. 
 
