@@ -16,7 +16,7 @@ Using a large data set of houses sold in the greater Seattle area between 2014 a
 
 First, I created some visualizations to determine whether variables were continuous or categorical, and their correlations with my target variable (sale price).
 ![Dataset Histograms](./Images/hists.png)
-![Dataset Correlation Heatmap](./Images/hists.png)
+![Dataset Correlation Heatmap](./Images/heatmap.png)
 
 After running some statistical tests, I had a good idea of which features were important and which ones I would need to transform in order to be useful.
 
@@ -62,6 +62,7 @@ With a bit more time, I'd go back into the data and review the distributions and
 ├── README.md                           <- This README file
 ├── code
 │   ├── housing.ipynb                   <- Exploratory notebook
+│   ├── final.ipynb                     <- Notebook with final model and pickle
 │   ├── data_clean.py                   <- .py functions for data cleaning
 |   ├── model.py                        <- .py functions for testing linear regression models
 ├── data                                <- The housing dataset and holdout
