@@ -13,7 +13,8 @@ def train_model(features, target):
     y_pred = lr.predict(features)
     r2 = lr.score(features, target)
     rsme = mean_squared_error(target, y_pred)
-    return print('R Squared:' + str(r2), 'RSME:' + str((rsme**.5)))
+    print('R Squared:' + str(r2), 'RSME:' + str((rsme**.5)))
+    return lr
 
 def train_model_log(features, target):
     """
@@ -27,7 +28,8 @@ def train_model_log(features, target):
     y_pred = np.exp(lr.predict(features))
     r2 = lr.score(features, target)
     rsme = mean_squared_error(target, y_pred)
-    return print('R Squared:' + str(r2), 'RSME:' + str((rsme**.5)))
+    print('R Squared:' + str(r2), 'RSME:' + str((rsme**.5)))
+    return lr
 
 def polynomialize(features, power):
     """takes in a DataFrame of features and an exponent value, outputs a new DataFrame with PolynomialFeatures applied
