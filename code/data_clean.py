@@ -30,6 +30,9 @@ def dummy_list(column, prefix, drop_value):
     return dum
 
 def best_schools(column, zips):
+    '''takes in a column of zipcodes and a list of targets
+    and converts them to dummies, highlighting the selected
+    zip codes'''
     schools = []
     for i in column:
         if i in zips:
@@ -39,6 +42,8 @@ def best_schools(column, zips):
     return schools
 
 def price_adjust(column):
+    '''Takes in a price column and trims the outermost 5% to the the floor/ceiling
+    of that percentile'''
     adj = []
     t1 = np.percentile(column, 2.5)
     t2 = np.percentile(column, 97.5)
